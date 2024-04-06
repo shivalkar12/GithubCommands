@@ -1,0 +1,217 @@
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ ls
+amazon.txt
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ echo "signup" >>amazon.txt
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ ls
+amazon.txt
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ cat amazon.txt
+signup
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git init
+Initialized empty Git repository in C:/Users/shiva/OneDrive/Desktop/amazon/.git/
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (main)
+$ git add .
+warning: in the working copy of 'amazon.txt', LF will be replaced by CRLF the next time Git touches it
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   amazon.txt
+
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (main)
+$ git commit -m "m1"
+[main (root-commit) e13008b] m1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 amazon.txt
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (main)
+$ git remote add origin https://github.com/shivalkar12/amazon.git
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (main)
+$ git branch -m master
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 214 bytes | 214.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shivalkar12/amazon.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ echo "login" >> amazon.txt
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ cat amazon.txt
+signup
+login
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git add .
+warning: in the working copy of 'amazon.txt', LF will be replaced by CRLF the next time Git touches it
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git commit -m "m2"
+[master f860fa6] m2
+ 1 file changed, 1 insertion(+)
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git log --oneline
+f860fa6 (HEAD -> master) m2
+e13008b (origin/master) m1
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 249 bytes | 249.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shivalkar12/amazon.git
+   e13008b..f860fa6  master -> master
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ echo "homepage" >>amazon.txt
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ cat amazon.txt
+signup
+login
+homepage
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git add .
+warning: in the working copy of 'amazon.txt', LF will be replaced by CRLF the next time Git touches it
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git commit -m "m3"
+[master 933c548] m3
+ 1 file changed, 1 insertion(+)
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git log --oneline
+933c548 (HEAD -> master) m3
+f860fa6 (origin/master) m2
+e13008b m1
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ echo "profile" >>amazon.txt
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ cat amazon.txt
+signup
+login
+homepage
+profile
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git add .
+warning: in the working copy of 'amazon.txt', LF will be replaced by CRLF the next time Git touches it
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git commit -m "m4"
+[master 3096b7a] m4
+ 1 file changed, 1 insertion(+)
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git log --oneline
+3096b7a (HEAD -> master) m4
+933c548 m3
+f860fa6 (origin/master) m2
+e13008b m1
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git push origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 495 bytes | 247.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shivalkar12/amazon.git
+   f860fa6..3096b7a  master -> master
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ echo "fake call" >> amazon.txt
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ cat amazon.txt
+signup
+login
+homepage
+profile
+fake call
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git add .
+warning: in the working copy of 'amazon.txt', LF will be replaced by CRLF the next time Git touches it
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git commit -m "m5"
+[master 16c2387] m5
+ 1 file changed, 1 insertion(+)
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git reset amazon.txt
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git checkout amazon.txt
+Updated 0 paths from the index
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git reset --hard head~1
+HEAD is now at 3096b7a m4
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git log --oneline
+3096b7a (HEAD -> master, origin/master) m4
+933c548 m3
+f860fa6 m2
+e13008b m1
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git reset --soft head~1
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git log --oneline
+933c548 (HEAD -> master) m3
+f860fa6 m2
+e13008b m1
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ cat amazon.txt
+signup
+login
+homepage
+profile
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git revert^C
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ git revert 933c548
+error: your local changes would be overwritten by revert.
+hint: commit your changes or stash them to proceed.
+fatal: revert failed
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$ revert "m3" issues
+bash: revert: command not found
+
+shiva@shweta MINGW64 ~/OneDrive/Desktop/amazon (master)
+$
